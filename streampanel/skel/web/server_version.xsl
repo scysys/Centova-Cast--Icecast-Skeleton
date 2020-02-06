@@ -68,6 +68,7 @@
 	<div id="footer">
 		<p>Support icecast development at: <a href="http://www.icecast.org" target="_blank">www.icecast.org</a></p>
 		<p>This Server ist Hosted by STREAMPANEL. Professional Web Radio services at: <a href="https://www.streampanel.net/cloud/" target="_blank">www.streampanel.net</a></p>
+		<p><a href="https://www.streampanel.net/kontakt/datenschutz/" target="_blank">Datenschutz</a> | <a href="https://www.streampanel.net/kontakt/impressum/" target="_blank">Impressum</a></p>
 	</div>
 </body>
 </html>
