@@ -13,9 +13,21 @@ fallback_file_set_message: '{="A fallback clip has already been assigned for thi
 	window.mountpoint_list = new IceCastMPListEditor(window,'window.mountpoint_list','mountpoints',ml);
 {/onready}
 
-{="Current mount points"}:<br />
+{css}
+select#mountpoints_list {
+    height: 40px !important;
+}
+{/css}
 
-<div class="list_editor_manager">
+<div class="m-portlet m-portlet--mobile m-portlet--rounded m-portlet--head-solid-bg">
+<div class="m-portlet__head sp-box-table">
+<div class="m-portlet__head-caption">
+<div class="m-portlet__head-title">
+<h3 class="m-portlet__head-text sp-box-table"> {="Mount Points"} </h3>
+</div>
+</div>
+</div>
+<div class="m-portlet__body">
 
 <select class="form-control" name="config[mountpoints][]" size="10" id="mountpoints_list">
 {loop $mountpoint=$config.mountpoints}
@@ -26,15 +38,14 @@ fallback_file_set_message: '{="A fallback clip has already been assigned for thi
 <!--<input type="button" id="mountpoints_new" value="{="Create new"}" />
 <input type="button" id="mountpoints_remove" value="{="Remove"}" />-->
 
-</div>
-<div class="list_editor_form fstabset" id="mountpoints_form">
+<div class="fstabset" id="mountpoints_form">
 
 	<fieldset id="mountpoint_settings_tab" class="accordion_active">
 		<legend>{="Settings"}</legend>
 		<table class="table">
 		<tr>
 			<td width="130">{="Mount point"}:</td>
-			<td><input type="text" name="mountpoints_field[mountname]" id="activempname" class="list_editor_field" size="30" value="" /></td>
+			<td><input disabled="disabled" type="text" name="mountpoints_field[mountname]" id="activempname" class="list_editor_field" size="30" value="" /></td>
 		</tr>
 		{if ($creating==0) && ($template_editor==0)}
 		<tr>
@@ -169,3 +180,6 @@ fallback_file_set_message: '{="A fallback clip has already been assigned for thi
 	<br />
 
 </div>	
+
+</div>
+</div>
